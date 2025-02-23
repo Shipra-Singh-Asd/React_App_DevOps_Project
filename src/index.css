@@ -1,0 +1,281 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color:#ffffff;
+  color: white;
+  min-height: 100vh;
+  font-family:'Roboto' ,sans-serif;
+  transition: background-color 0.3s,color 0.3s;
+}
+
+.header,h1{
+  color:teal;
+  text-align: center;
+  margin:40px 10px;}
+
+.dark-mode{
+  background-color: #1e1e1e;
+  color:#ffffff
+}
+.dark-mode-toggle{
+  position: absolute;
+  top:20px;
+  right:20px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.dark-mode-toggle:hover {
+  background-color: #555;
+}
+
+.form-input,.form-button{
+  padding: 10px;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: 500;
+}
+.modal-content {
+  position: fixed; /* Stay in place */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the modal */
+  background-color: #c0e4de; /* White background */
+  padding: 20px;
+  border: 1px solid #888; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  z-index: 1000; /* Ensure it's on top */
+  min-width: 300px; /* Minimum width */
+  text-align: center; /* Center text */
+}
+
+.modal-content p {
+  margin-bottom: 15px; /* Space between text and button */
+  font-size: 1.1rem;
+  color: #05969b;
+}
+
+
+.modal-content button {
+  background-color: #05969b; /* Green button */
+  color: rgb(236, 236, 236);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.modal-content button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+
+/* Optional: Add a backdrop/overlay */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 999; /* Below the modal but above other content */
+}
+/* Serial Number Styling */
+.task-serial {
+  font-weight: normal;
+  color: teal;
+  font-size: 35px;
+  margin-right: 10px;
+  min-width: 25px; /* Ensures alignment */
+  display: inline-block;
+  text-align: right;
+}
+
+
+.form-input{
+  width: 350px;
+  border:2px solid gray;
+  background-color: #bcb5b5;
+  color: rgb(17, 16, 16);
+  
+}
+/* Full-page styling */
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Content Box */
+.content {
+  max-width: 700px;
+  padding: 40px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.landing-page h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Paragraph */
+.landing-page p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.start-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.start-btn:hover {
+  background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .landing-page h1 {
+    font-size: 2rem;
+  }
+
+  .landing-page p {
+    font-size: 1rem;
+  }
+}
+
+
+.form-button{
+  width: 90px;
+  color:white;
+  background-color: #28a745;
+  cursor: pointer;
+  margin-left: 15px;
+  border:2px solid grey;
+  transition: 0.3s all ease-in-out;
+}
+
+.form-button:hover{
+   background:#575b58;
+}
+
+.todo-li{
+  margin: 16px;
+  background: transparent;
+  font-size: 24px;
+  color: rgb(207, 254, 232);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.li-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border:1px solid grey;
+  padding: 12px;
+}
+
+
+.button-complete,
+.button-save,
+.button-delete,
+.button-edit{
+  border:none;
+  border-radius:10px ;
+  cursor:pointer;
+  width:100px;
+  height: 40px;
+  text-align: center;
+  font-size: 15px;
+  margin-left: 30px;
+  color:white ;
+  }
+
+.button-complete{
+  background-color: #4fce5d;
+}
+
+
+.button-delete{
+  background-color: #fc4338;
+} 
+
+.button-save{
+  background-color: #9370DB;
+  } 
+
+.button-edit{
+   background-color: #669bfa;
+} 
+
+.completed {
+  text-decoration-style:solid ;
+  text-decoration-line:line-through ;
+  text-decoration-color: rgb(202, 189, 189);
+  opacity: 0.3;
+}
+
+.li-input{
+  width: 400px;
+  height: 40px;
+  font-size: 18px;
+  border: 2px solid grey;
+  padding-left: 30px;
+  font-weight: 400;
+  background-color: #1f1f1f;
+  color: white;
+}
+
+input:focus,
+button:focus{
+  outline: none;
+}
+
+.text-complete,.text-edit,.text-delete,.text-save{
+  padding: 5px;
+}
