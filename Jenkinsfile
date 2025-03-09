@@ -4,7 +4,7 @@ pipeline {
     environment {
         IMAGE_NAME = "jenkins-data-jenkins"
         IMAGE_TAG = "latest"
-        CONTAINER_NAME = "jenkins"
+        CONTAINER_NAME = "jenkins-data"
         SONARQUBE_URL = "http://localhost:9000"  // Update based on your SonarQube setup
     }
 
