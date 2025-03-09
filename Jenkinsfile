@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "my-react-app"
+        IMAGE_NAME = "jenkins-data-jenkins"
         IMAGE_TAG = "latest"
-        CONTAINER_NAME = "react-container"
+        CONTAINER_NAME = "jenkins"
         SONARQUBE_URL = "http://localhost:9000"  // Update based on your SonarQube setup
     }
 
