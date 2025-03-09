@@ -60,6 +60,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
+                    sh "docker stop ${CONTAINER_NAME} || true"
+                    sh "docker rm ${CONTAINER_NAME} || true"
                     sh "docker-compose up -d"
                 }
             }
