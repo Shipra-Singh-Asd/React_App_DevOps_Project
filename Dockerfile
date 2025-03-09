@@ -1,9 +1,10 @@
 # Use Node.js for building the app
-FROM node:22.11.0 as build
+FROM node:22.11.0 AS build
 WORKDIR /app
 COPY package*.json ./
+RUN npm install -g pnpm
 COPY . .
-RUN npm run build
+RUN pnpm run build
 
 
 # Use Nginx to serve the built React app

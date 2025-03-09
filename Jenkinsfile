@@ -57,14 +57,22 @@ pipeline {
             }
         }
 
-        stage('Run Docker Container') {
+        stage('Deploy') {
             steps {
                 script {
-                    sh "docker stop ${CONTAINER_NAME} || true"
-                    sh "docker rm ${CONTAINER_NAME} || true"
-                    sh "docker run -d -p 3000:3000 --name ${CONTAINER_NAME} ${IMAGE_NAME}:${IMAGE_TAG}"
+                    sh "docker-compose up -d"
                 }
             }
+        }
+
+        // stage('Run Docker Container') {
+        //     steps {
+        //         script {
+        //             sh "docker stop ${CONTAINER_NAME} || true"
+        //             sh "docker rm ${CONTAINER_NAME} || true"
+        //             sh "docker run -d -p 3000:3000 --name ${CONTAINER_NAME} ${IMAGE_NAME}:${IMAGE_TAG}"
+        //         }
+        //     }
         }
     }
 

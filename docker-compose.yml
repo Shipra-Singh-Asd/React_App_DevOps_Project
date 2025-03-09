@@ -1,7 +1,7 @@
 services:
-  react-app:
+  app:
     build: .
-    container_name: react-container
+    container_name: jenkins-data
     ports:
       - "3000:80"
     volumes:
