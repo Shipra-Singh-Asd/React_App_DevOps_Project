@@ -15,15 +15,3 @@ services:
       interval: 30sec
       timeout: 10sec
       retries: 3
-
-  sonarqube:
-    image: sonarqube:lts
-    container_name: sonarqube
-    ports:
-      - "9000:9000"
-    environment:
-      SONARQUBE_JDBC_URL: jdbc:postgresql://db:5432/sonar
-      SONARQUBE_JDBC_USERNAME: sonar
-      SONARQUBE_JDBC_PASSWORD: sonar
-    depends_on:
-      - db
