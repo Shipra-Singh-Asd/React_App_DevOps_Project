@@ -73,7 +73,7 @@ pipeline {
         //             sh "docker run -d -p 3000:3000 --name ${CONTAINER_NAME} ${IMAGE_NAME}:${IMAGE_TAG}"
         //         }
         //     }
-        }
+        // }
     }
 
     post {
