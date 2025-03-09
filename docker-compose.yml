@@ -7,8 +7,6 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
-    depends_on:
-      - sonarqube
     restart: always
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:80"]
